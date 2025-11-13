@@ -93,7 +93,7 @@ def plot_first_hits( evt, center_offset=np.array([0,0,0]) ):
     # Get total charge for each DOM to use for marker size
     pulse_charges = evt.pulses.pulse_charges
     total_charges = np.array([sum(charges) for charges in pulse_charges])
-    marker_sizes = 4 * np.log10(total_charges + 1) # Scale marker size
+    marker_sizes = 8 * np.log10(total_charges + 1) # Scale marker size
 
     hits = go.Scatter3d(
             x = x_coords,
